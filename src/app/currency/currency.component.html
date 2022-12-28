@@ -1,0 +1,23 @@
+<select 
+[(ngModel)] = leftcurrency
+>
+    <option 
+    *ngFor="let i of arr"
+    value="{{i.cur}}">{{i.cur}}</option>
+</select>
+
+
+<input 
+[(ngModel)]="amount"
+type="text" placeholder="enter amount of money">
+
+
+<select 
+
+[(ngModel)]="rightcurrency">
+    <option 
+    *ngFor="let i of arr"
+    value="{{i.cur}}">{{i.cur}}</option>
+</select>
+
+<button (click)="convert()">convert</button>
